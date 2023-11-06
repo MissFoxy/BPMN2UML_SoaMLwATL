@@ -1,0 +1,32 @@
+-- @path BPMN=/progetto_102023/Metamodels/bpmn.ecore
+-- @path UML=/progetto_102023/Metamodels/uml.ecore
+
+module transformationBPMN2UML;
+create OUT : UML from IN : BPMN;
+
+rule startevent2node {
+    from
+        s1: BPMN!StartEvent
+    to
+        t1: UML!InitialNode
+}
+
+rule Sequence2Control {
+    from
+        s2: BPMN!SequenceFlow
+    to
+        t2: UML!ActivityEdge
+}
+
+rule EndEvent2FinalNode {
+	from
+		s3: BPMN!EndEvent
+	to
+		t3: UML!FinalNode(
+            name <- 'end'
+        )
+}
+
+
+
+
