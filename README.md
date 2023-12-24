@@ -1,4 +1,6 @@
 # Progetto MBSE svolto da Gabriele Benedetti & Giulia Pascale nell'AA 2022-23
+Il seguente progetto contiene il lavoro svolto per il progetto del corso Model Based Systems Engineering nell’Anno Accademico 2022-23 dagli studenti Gabriele Benedetti e Giulia Pascale presso l'Università degli studi di Roma TorVergata.
+Il progetto ha riguardato la realizzazione di uno strumento software per la trasformazione di modelli BPMN in modelli UML annotati con il profilo SoaML. Il linguaggio di trasformazione utilizzato è ATL.
 
 ## Contenuto
 
