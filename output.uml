@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_q3BLMZ0DEe6KC9b7BNXiig">
+    <packagedElement xmi:type="uml:Activity" xmi:id="_q3BLMp0DEe6KC9b7BNXiig" node="_q3BLRJ0DEe6KC9b7BNXiig _q3BLRZ0DEe6KC9b7BNXiig _q3BLRp0DEe6KC9b7BNXiig _q3BLR50DEe6KC9b7BNXiig _q3BLSJ0DEe6KC9b7BNXiig _q3BLSZ0DEe6KC9b7BNXiig _q3BLSp0DEe6KC9b7BNXiig _q3BLS50DEe6KC9b7BNXiig _q3BLTJ0DEe6KC9b7BNXiig _q3BLTZ0DEe6KC9b7BNXiig _q3BLTp0DEe6KC9b7BNXiig _q3BLT50DEe6KC9b7BNXiig _q3BLUJ0DEe6KC9b7BNXiig _q3BLUZ0DEe6KC9b7BNXiig _q3BLUp0DEe6KC9b7BNXiig _q3BLU50DEe6KC9b7BNXiig" group="_q3BLM50DEe6KC9b7BNXiig _q3BLNJ0DEe6KC9b7BNXiig _q3BLNZ0DEe6KC9b7BNXiig">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLNp0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLN50DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLOJ0DEe6KC9b7BNXiig" name="1" target="_q3BLR50DEe6KC9b7BNXiig" source="_q3BLRJ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLOZ0DEe6KC9b7BNXiig" name="13" target="_q3BLUp0DEe6KC9b7BNXiig" source="_q3BLRp0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLOp0DEe6KC9b7BNXiig" name="11" target="_q3BLRp0DEe6KC9b7BNXiig" source="_q3BLSJ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLO50DEe6KC9b7BNXiig" name="2" target="_q3BLSZ0DEe6KC9b7BNXiig" source="_q3BLRZ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLPJ0DEe6KC9b7BNXiig" name="4" target="_q3BLUJ0DEe6KC9b7BNXiig" source="_q3BLSZ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLPZ0DEe6KC9b7BNXiig" name="6" target="_q3BLSp0DEe6KC9b7BNXiig" source="_q3BLUJ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLPp0DEe6KC9b7BNXiig" name="7" target="_q3BLS50DEe6KC9b7BNXiig" source="_q3BLUJ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLP50DEe6KC9b7BNXiig" name="8" target="_q3BLUZ0DEe6KC9b7BNXiig" source="_q3BLSp0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLQJ0DEe6KC9b7BNXiig" name="9" target="_q3BLUZ0DEe6KC9b7BNXiig" source="_q3BLS50DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLQZ0DEe6KC9b7BNXiig" name="10" target="_q3BLTJ0DEe6KC9b7BNXiig" source="_q3BLUZ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLQp0DEe6KC9b7BNXiig" name="12" target="_q3BLTZ0DEe6KC9b7BNXiig" source="_q3BLTJ0DEe6KC9b7BNXiig"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_q3BLQ50DEe6KC9b7BNXiig" name="14" target="_q3BLU50DEe6KC9b7BNXiig" source="_q3BLTZ0DEe6KC9b7BNXiig"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="_q3BLM50DEe6KC9b7BNXiig" name="Professore"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="_q3BLNJ0DEe6KC9b7BNXiig" name="Studente"/>
+      <group xmi:type="uml:ActivityPartition" xmi:id="_q3BLNZ0DEe6KC9b7BNXiig" name="Default Pool"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_q3BLRJ0DEe6KC9b7BNXiig" name="Inizio lezione 1" outgoing="_q3BLOJ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:InitialNode" xmi:id="_q3BLRZ0DEe6KC9b7BNXiig" name="Inizio lezione 2" outgoing="_q3BLO50DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLRp0DEe6KC9b7BNXiig" name="Discussione soluzione" incoming="_q3BLOp0DEe6KC9b7BNXiig" outgoing="_q3BLOZ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLR50DEe6KC9b7BNXiig" name="Spiegazione esercizio" incoming="_q3BLOJ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLSJ0DEe6KC9b7BNXiig" name="Raccolta soluzioni degli studenti" outgoing="_q3BLOp0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLSZ0DEe6KC9b7BNXiig" name="Ricezione esercizio" incoming="_q3BLO50DEe6KC9b7BNXiig" outgoing="_q3BLPJ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLSp0DEe6KC9b7BNXiig" name="Svolgimento in autonomia" incoming="_q3BLPZ0DEe6KC9b7BNXiig" outgoing="_q3BLP50DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLS50DEe6KC9b7BNXiig" name="Svolgimento in gruppo" incoming="_q3BLPp0DEe6KC9b7BNXiig" outgoing="_q3BLQJ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLTJ0DEe6KC9b7BNXiig" name="Risoluzione" incoming="_q3BLQZ0DEe6KC9b7BNXiig" outgoing="_q3BLQp0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_q3BLTZ0DEe6KC9b7BNXiig" name="Scrivere soluzione da consegnare" incoming="_q3BLQp0DEe6KC9b7BNXiig" outgoing="_q3BLQ50DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:AcceptEventAction" xmi:id="_q3BLTp0DEe6KC9b7BNXiig" name="Esercizio"/>
+      <node xmi:type="uml:AcceptEventAction" xmi:id="_q3BLT50DEe6KC9b7BNXiig" name="Soluzione"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_q3BLUJ0DEe6KC9b7BNXiig" name="Exclusive Gateway 1" incoming="_q3BLPJ0DEe6KC9b7BNXiig" outgoing="_q3BLPZ0DEe6KC9b7BNXiig _q3BLPp0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:MergeNode" xmi:id="_q3BLUZ0DEe6KC9b7BNXiig" name="Inclusive Gateway 1" incoming="_q3BLP50DEe6KC9b7BNXiig _q3BLQJ0DEe6KC9b7BNXiig" outgoing="_q3BLQZ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_q3BLUp0DEe6KC9b7BNXiig" name="Fine lezione" incoming="_q3BLOZ0DEe6KC9b7BNXiig"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_q3BLU50DEe6KC9b7BNXiig" name="Invio esercizio risolto" incoming="_q3BLQ50DEe6KC9b7BNXiig"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:TimeEvent" xmi:id="_sTHVwJ0DEe6KC9b7BNXiig" name="1 ora"/>
+  </uml:Model>
+</xmi:XMI>

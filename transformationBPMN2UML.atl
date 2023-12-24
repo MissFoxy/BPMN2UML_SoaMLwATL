@@ -1,32 +1,114 @@
--- @path BPMN=/progetto_102023/Metamodels/bpmn.ecore
--- @path UML=/progetto_102023/Metamodels/uml.ecore
+-- @nsURI BPMN=http://www.omg.org/spec/BPMN/20100524/MODEL
+-- @nsURI UML=http://www.eclipse.org/uml2/5.0.0/UML
 
 module transformationBPMN2UML;
 create OUT : UML from IN : BPMN;
 
-rule startevent2node {
-    from
-        s1: BPMN!StartEvent
-    to
-        t1: UML!InitialNode
-}
-
-rule Sequence2Control {
-    from
-        s2: BPMN!SequenceFlow
-    to
-        t2: UML!ActivityEdge
-}
-
-rule EndEvent2FinalNode {
+unique lazy rule BPMNPkg {
 	from
-		s3: BPMN!EndEvent
+		s : BPMN!Definitions
 	to
-		t3: UML!FinalNode(
-            name <- 'end'
-        )
+		t : UML!Model 
+}
+
+unique lazy rule ActivityPkg {
+	from
+		s : BPMN!Definitions
+	to
+		t : UML!Activity (
+			package <- thisModule -> BPMNPkg()
+		)
+}
+
+rule StartEvent2InitialNode{
+	from
+		s : BPMN!StartEvent
+	to 
+		t : UML!InitialNode(
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule Participant2ActivityPartition{
+	from
+		s : BPMN!Participant 
+	to 
+		t : UML!ActivityPartition (
+			name <- s.name,
+			inActivity <- thisModule.ActivityPkg())
+}
+
+rule Task2OpaqueAction{
+	from
+		s : BPMN!Task
+	to 
+		t : UML!OpaqueAction (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule Message2AcceptEventAction{
+	from
+		s : BPMN!Message
+	to 
+		t : UML!AcceptEventAction (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule ExclusiveGateway2DecisionNode{
+	from
+		s : BPMN!ExclusiveGateway 
+	to 
+		t : UML!DecisionNode (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule Inclusive2MergeNode{
+	from
+		s : BPMN!InclusiveGateway
+	to 
+		t : UML!MergeNode (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule EndEvent2ActivityFinalNode{
+	from
+		s : BPMN!EndEvent
+	to 
+		t : UML!ActivityFinalNode (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
+}
+
+rule IntermediateCatchEvent2TimeEvent{
+	from
+		s : BPMN!IntermediateCatchEvent
+	to 
+		t : UML!TimeEvent (name <- s.name)
+}
+
+rule MessageFlow2ControlFlow{
+	from
+		s : BPMN!MessageFlow
+	to 
+		t : UML!ControlFlow (
+			name <- s.name,
+			activity <- thisModule.ActivityPkg())
 }
 
 
 
+rule SequenceFlow2ControlFlow{
+	from
+		s : BPMN!SequenceFlow(not (s.sourceRef.oclIsKindOf(BPMN!IntermediateCatchEvent) or s.targetRef.oclIsKindOf(BPMN!IntermediateCatchEvent)))
+	to 
+		t : UML!ControlFlow (
+			name <- s.name,
+			source <- s.sourceRef,
+			target <- s.targetRef,
+			activity <- thisModule.ActivityPkg())
+}
 

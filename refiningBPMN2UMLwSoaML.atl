@@ -1,0 +1,33 @@
+-- @atlcompiler emftvm
+-- @nsURI UML=http://www.eclipse.org/uml2/5.0.0/UML
+-- @path PROFILE=/progetto_MBSE/SoaMLprofile/SoaML.profile.uml
+
+module refiningBPMN2UMLwSoaML;
+create OUT : UML refining IN : UML, PROFILE : UML;
+
+	
+helper def : SoaMLProfile : UML!Profile =
+	UML!Profile.allInstancesFrom('PROFILE')->any(p | p.name = 'SoaML').debug();
+
+helper def : getStereotype(name : String) : UML!Stereotype =
+	UML!Stereotype.allInstances()->select(p | p.name = name)->first();
+
+rule UMLPkg{
+    from
+        s: UML!Model 
+    to
+        t: UML!Model 
+	do {
+		t.applyProfile(thisModule.SoaMLProfile);
+	}
+}
+
+rule AcceptEventActionStereotype{
+	from
+		s : UML!AcceptEventAction 
+	to 
+		t : UML!AcceptEventAction (name <- s.name)
+	do {
+		--t.applyStereotype(thisModule.getStereotypeT('SoaML::Contracts::Service Contract'));
+	}
+}
